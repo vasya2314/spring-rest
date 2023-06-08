@@ -7,6 +7,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(
+        origins = {
+                "https://unknown-health-production.up.railway.app",
+        },
+        methods = {
+                RequestMethod.OPTIONS,
+                RequestMethod.GET,
+                RequestMethod.PUT,
+                RequestMethod.DELETE,
+                RequestMethod.POST
+        })
+
 @RestController
 @RequestMapping("/api")
 public class MyRESTController {
